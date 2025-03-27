@@ -1,0 +1,52 @@
+.zagolovok{
+    text-align: center;
+    font-size: 50px;
+}
+
+.item-left {
+    clear: both; /* Очищає потік після зображення */
+    max-width: 70%;
+    background-color: #8ef8df;
+    border-radius: 120px;
+    word-wrap: break-word; /* Переносить текст на новий рядок, якщо він не поміщається */
+    padding: 25px; /* Для внутрішнього відступу */
+    box-sizing: border-box; /* Враховує padding в загальній ширині */
+}
+.item-yellow{
+
+    clear: both; /* Очищає потік після зображення */
+    max-width: 70%;
+    background-color: #f4e681;
+    border-radius: 120px;
+    word-wrap: break-word; /* Переносить текст на новий рядок, якщо він не поміщається */
+    padding: 25px; /* Для внутрішнього відступу */
+    box-sizing: border-box; /* Враховує padding в загальній ширині */
+}
+
+.borsch, .potato {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100%;
+    height: auto;
+    padding-right: 20px;
+    max-width: 50%;
+    max-height: 50%;
+    border-radius: 120px;
+    float: right; /* Зображення буде прикріплене до правого краю */
+
+}
+p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+.video-container{
+
+    display: flex;
+    justify-content: center;
+}
+.video{
+    border-radius: 70px;
+    padding-top: 25px;
+    width: 910px;
+    height: 540px;
+}

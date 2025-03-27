@@ -1,0 +1,60 @@
+.sidebar{
+    position: fixed;
+    top: 0; /* Відстань від верхнього краю */
+    left: 0; /* Відстань від лівого краю */
+    height: 100%; /* Висота сайдбару на всю висоту сторінки */
+    width: 200px;
+    flex-direction: column; /* Вертикальне розташування елементів */
+    justify-content: center; /* Відцентровує елементи по вертикалі */
+    background-color: rgb(151, 151, 151);
+}
+.logo{
+    position: relative;
+    top:10px;
+    left: 20%;
+    width: 110px;
+    height: 110px;
+    border-radius: 90px; /* Закруглення*/
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Плавна анімація */
+}
+.logo:hover {
+    transform: scale(1.15);
+}
+.sidebar button:not(.newRecipeBtn){
+    text-align: left;
+    border: none;
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+    font-size: 16px; /* Розмір шрифта */
+    background-color: rgba(99, 98, 98, 0.42);
+    color: #ffffff;
+    position: relative;
+    left: 0px;
+    top: 20px;
+}
+.newRecipeBtn{
+    position: fixed;
+    height: 80px;
+    width: auto;
+    bottom: 10px;
+    right: 10px;
+    padding: 20px 30px;
+    font-weight: bold;
+    border-radius: 150px;
+    transition: transform 0.3s ease; /* Плавна анімація */
+}
+.newRecipeBtn:hover{
+    background-color: rgba(99, 227, 106, 0.51);
+    transform: scale(1.15);
+}
+/* Зміна кольору при наведенні */
+.sidebar button:hover:not(.newRecipeBtn) {
+    background-color: #45a049; /* Темніший зелений колір */
+}
+/* Основний контент */
+body {
+    margin-left: 200px; /* Відступ для контенту, щоб він не перекривав сайдбар */
+    padding: 20px;
+}
