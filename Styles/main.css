@@ -1,20 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 .line{
     width: 100%;
     height: 150px;
     display: block;
     margin: 0 auto; /* Центруємо */
+    padding-bottom: 20px;
+}
+.line-down{
+    width: 100%;
+    height: 150px;
+    display: block;
+    margin: 0 auto; /* Центруємо */
+    padding-top: 1150px;
 }
 h2{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
 }
 h1{
+    font-size: 38px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
 }
 body{
     align-content: center;
 }
 .slider {
+    padding-top: 350px;
     justify-content: center;
     text-align: center;
     max-width: 960px;
@@ -164,3 +181,42 @@ input[type="radio"]{
         height: 10px;
     }
 }
+.ukraine-map {
+    position: absolute;
+    pointer-events: auto; /* Включає взаємодію */
+    width: 600px; /* або потрібний розмір */
+    height: 800px;
+}
+.region {
+    position: absolute;
+    height: auto;
+}
+.region:hover {
+    transform: scale(1.2);
+}
+
+.zakarpattia { width: 200px; top: 500px; left: 250px; }
+.lvivska { width: 220px; top: 300px; left: 30px; }
+.ivano-frankivska { width: 160px; top: 440px; left: 120px; }
+.ternopilska { width: 150px; top: 350px; left: 210px; }
+.chernivetska { width: 200px; top: 570px; left: 250px; }
+.volynska { width: 200px; top: 140px; left: 110px; }
+.rivnenska { width: 180px; top: 160px; left: 270px; }
+.khmelnytska { width: 170px; top: 320px; left: 340px; }
+.vinnytska { width: 220px; top: 430px; left: 480px; }
+.zhytomyrska { width: 210px; top: 160px; left: 460px; }
+.kyivska { width: 220px; top: 210px; left: 640px; }
+.chernihivska { width: 210px; top: 90px; left: 760px; }
+.sumska { width: 200px; top: 80px; left: 970px; }
+.poltavska { width: 300px; top: 310px; left: 880px; }
+.cherkaska { width: 250px; top: 390px; left: 680px; }
+.kirovohradska { width: 310px; top: 530px; left: 700px; }
+.dnipropetrovska { width: 300px; top: 550px; left: 970px; }
+.kharkivska { width: 280px; top: 310px; left: 1150px; }
+.luhanska { width: 210px; top: 360px; left: 1430px; }
+.donetska { width: 230px; top: 530px; left: 1290px; }
+.zaporizka { width: 260px; top: 720px; left: 1080px; }
+.khersonska { width: 320px; top: 780px; left: 840px; }
+.mikolayivska { width: 260px; top: 680px; left: 690px; }
+.odeska { width: 260px; top: 660px; left: 490px; }
+.crimea { width: 350px; top: 980px; left: 910px; }

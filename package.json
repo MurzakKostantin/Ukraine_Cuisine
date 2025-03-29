@@ -1,10 +1,20 @@
 {
-  "name": "WebStorm`sProjects",
-  "version": "1.0.0",
-  "description": "",
+  "name": "project",
+  "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
-  "private": true
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MurzakKostantin/Ukraine_Cuisine.git"
+  },
+  "author": "Kosta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MurzakKostantin/Ukraine_Cuisine/issues"
+  },
+  "homepage": "https://github.com/MurzakKostantin/Ukraine_Cuisine#readme",
+  "description": ""
 }
