@@ -24,7 +24,7 @@ const supabaseKey = process.env.supabaseKey;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Логін користувача
-app.post("/login", async (req, res) => {
+router.post("/login", async (req, res) => {
     const { email, password } = req.body;
 
     // Отримуємо користувача з бази
@@ -57,7 +57,7 @@ app.post("/login", async (req, res) => {
 });
 
 // Метод реєстрації користувача
-app.post("/register", async (req, res) => {
+router.post("/register", async (req, res) => {
     const { login, email, password } = req.body;
 
     // Перевірка, чи вже існує користувач з таким email
@@ -103,7 +103,7 @@ app.post("/register", async (req, res) => {
         },
     });
 });
-app.post("/upload-avatar", upload.single("avatar"), async (req, res) => {
+router.post("/upload-avatar", upload.single("avatar"), async (req, res) => {
     if (!req.file) {
         return res.status(400).json({ success: false, message: "Будь ласка, завантажте файл." });
     }
@@ -175,7 +175,7 @@ app.post("/upload-avatar", upload.single("avatar"), async (req, res) => {
     }
 });
 // Маршрут для оновлення даних користувача
-app.post("/update-profile", async (req, res) => {
+router.post("/update-profile", async (req, res) => {
     const { userId, name, email, aboutMe } = req.body;
 
     if (!userId) {
@@ -235,7 +235,7 @@ app.post("/update-profile", async (req, res) => {
     }
 });
 
-app.post("/update-recipe-photo", upload.single("recipe-photo"), async (req, res) => {
+router.post("/update-recipe-photo", upload.single("recipe-photo"), async (req, res) => {
     if (!req.file) {
         return res.status(400).json({ success: false, message: "Будь ласка, завантажте файл." });
     }
@@ -300,7 +300,7 @@ app.post("/update-recipe-photo", upload.single("recipe-photo"), async (req, res)
     }
 });
 
-app.post("/add-recipe", async (req, res) => {
+router.post("/add-recipe", async (req, res) => {
     const{name, recipe, ingredients, videoURL}=req.body;
 
     // Перевірка, чи вже існує користувач з таким email
@@ -341,7 +341,7 @@ app.post("/add-recipe", async (req, res) => {
         },
     });
 });
-app.get("/recipes", async (req, res) => {
+router.get("/recipes", async (req, res) => {
     try {
         const { data, error } = await supabase
             .from("ukraine-cuisine-cuisine")
@@ -356,7 +356,7 @@ app.get("/recipes", async (req, res) => {
         res.status(500).json({ success: false, message: err.message });
     }
 });
-app.patch("/update-recipes-likes", async (req, res) => {
+router.patch("/update-recipes-likes", async (req, res) => {
     const { id, like } = req.body;
 const updatedLikes={};
     try {
@@ -381,7 +381,7 @@ const updatedLikes={};
         res.status(500).json({ success: false, message: err.message });
     }
 });
-app.post("/add-user-recipe", async (req, res) => {
+router.post("/add-user-recipe", async (req, res) => {
     try {
         console.log("Запит отримано:", req.body);
 
@@ -414,7 +414,7 @@ app.post("/add-user-recipe", async (req, res) => {
         res.status(500).json({ success: false, message: err.message });
     }
 });
-app.post("/if-user-like",async(req, res) => {
+router.post("/if-user-like",async(req, res) => {
     const { userId,recipeId  } = req.body;
     const { data:favorites, error } = await supabase
         .from("favorites")
@@ -431,6 +431,8 @@ app.post("/if-user-like",async(req, res) => {
 // app.listen(PORT, () => {
 //     console.log(`✅ Сервер запущено на http://localhost:${PORT}`);
 // });
+app.use("/api", router);
+
 module.exports = (req, res) => {
     app(req, res);
 };
