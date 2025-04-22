@@ -1,4 +1,5 @@
 const express = require("express");
+const router = express.Router();
 const cors = require("cors");
 const { createClient } = require("@supabase/supabase-js");
 const bcrypt = require("bcryptjs");
