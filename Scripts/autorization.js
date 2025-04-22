@@ -26,7 +26,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     const password = document.getElementById("password").value;
 
     // Відправляємо запит на сервер
-    const response = await fetch(',,/api/login', {  // Замінено на 3000
+    const response = await fetch('../api/login', {  // Замінено на 3000
         method: "POST",
         headers: {
             "Content-Type": "application/json"
