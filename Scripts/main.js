@@ -6,7 +6,7 @@ window.addEventListener('scroll', function() {
 
 function removeOnRecipe(name)
 {
-    const catalogWindow = window.open('catalog.html', '_blank');
+    const catalogWindow = window.open('../HTML/Catalog.html', '_blank');
 
     catalogWindow.onload = function () {
         // Інколи не спрацьовує для нових вікон (через політики браузера),
