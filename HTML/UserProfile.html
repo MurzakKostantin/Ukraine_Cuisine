@@ -2,17 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Styles/userProfile.css">
     <link rel="stylesheet" href="../Styles/sidebar.css">
     <title>Особистий Кабінет</title>
 </head>
 <body>
+<div class="header">
+    <h1>Ваш особистий кабінет</h1>
+    <div class="header-buttons">
+        <button id="outBtn" class="outBtn">Вийти</button>
+        <button id="settingBtn" class="settingBtn">Налаштування</button>
+    </div>
+</div>
+<div class="main-block">
+    <img class="avatar" id="avatar" alt="Avatar" />
+    <input type="file" id="fileInput" style="display:none" accept="image/*">
+    <label class="userName" id = "userName"></label>
 
+    <label class="justLabel">Про мене</label>
+    <label class="aboutMe" id = "aboutMe"></label>
+</div>
+<h2>Улюблені рецепти</h2>
+<div id="recipes-container" class="recipe-grid"></div>
+
+
+<h2>Ваші рецепти</h2>
+<div id="myRecipes-container" class="recipe-grid"></div>
 <div class="sidebar">
     <img id="logo" class="logo" src="../resources/logo.png" alt="Опис зображення">
     <button id="UserProfile">Особистий кабінет</button>
     <button id="Recipe">Рецепти</button>
     <button id="History">Історія та культура</button>
 </div>
+
 </body>
 <script src="../Scripts/sidebar.js"></script>
+<script src="../Scripts/userProfile.js"></script>
 </html>

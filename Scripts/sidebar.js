@@ -6,20 +6,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const img = document.getElementById("logo");
     const newRecipeBtn = document.getElementById("newRecipeBtn");
 
+    userProfileBtn.addEventListener("click", function () {
+            window.location.href = "../HTML/UserProfile.html";
+    });
+
     img.addEventListener("click", function () {
         window.location.href = "../HTML/Main.html";
     });
-    // Додаємо обробники подій для кнопок
-    userProfileBtn.addEventListener("click", function () {
-        window.location.href = "../HTML/UserProfile.html"; // Перехід на сторінку профілю
-    });
+
     recipeBtn.addEventListener("click", function () {
         window.location.href = "../HTML/Catalog.html";
+
     });
     historyBtn.addEventListener("click", function () {
         window.location.href = "../HTML/History.html";
     });
+
     newRecipeBtn.addEventListener("click", function () {
         window.location.href = "../HTML/NewRecipePage.html";
     });
+
 });

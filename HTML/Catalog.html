@@ -7,34 +7,22 @@
     <title>Каталог</title>
 </head>
 <body>
-<h1>Справжні українські страви вже чекають на тебе</h1>
-<div class="search-bar">
-    <input class="search">
-    <img src="../resources/lupa.jpg" class="searchbtn">
-</div>
-<h2>Рецепт справжнього українського борщу</h2>
-<img src="../resources/borsch.webp" alt="Борщ" class="borsch-img">
+<h1 class="hero-title">Справжні українські страви вже чекають на тебе</h1>
 
-<h3>Інгредієнти</h3>
-<table>
-    <tr><th>Продукт</th><th>Кількість</th></tr>
-    <tr><td>Свинина (ребра або м’ясо)</td><td>500 г</td></tr>
-    <tr><td>Буряк</td><td>2 шт.</td></tr>
-    <tr><td>Картопля</td><td>3-4 шт.</td></tr>
-    <tr><td>Капуста</td><td>300 г</td></tr>
-    <tr><td>Морква, цибуля</td><td>по 1 шт.</td></tr>
-    <tr><td>Томатна паста</td><td>2 ст. л.</td></tr>
-    <tr><td>Часник</td><td>2-3 зубчики</td></tr>
-    <tr><td>Сметана, зелень</td><td>за смаком</td></tr>
-    <tr><td>Сіль, перець, лавровий лист</td><td>за смаком</td></tr>
-</table>
-<h2>Спосіб приготування</h2>
-<div class="recipe">
-    <p> Відварити м'ясо на середньому вогні 1-1,5 години, періодично знімаючи піну. Додати очищену та нарізану картоплю.
-        Буряк натерти на тертці, обсмажити на сковороді з олією, додати томатну пасту та тушкувати 5-7 хвилин. Цибулю та моркву дрібно нарізати, обсмажити на сковороді.
-        Додати капусту, бурякову засмажку, цибулю з морквою у каструлю. Посолити, поперчити, додати лавровий лист, варити ще 10 хвилин.
-        Додати подрібнений часник, накрити кришкою і дати настоятися 15 хвилин. Подавати гарячим зі сметаною та зеленню. Смачного!
+<div class="search-bar">
+    <input class="search" id="search" placeholder="Пошук страви...">
+    <img src="../resources/lupa.jpg" id="searchBtn" class="searchbtn" alt="Пошук">
+
+    <div class="sortuvannia">
+        <label for="sort">Сортувати:</label>
+        <select class="sort" id="sort" name="recipe">
+            <option value="id-asc">З новіших до старіших</option>
+            <option value="id-desc">Зі старіших до новіших</option>
+            <option value="likes-asc">Починаючи з популярніших</option>
+        </select>
+    </div>
 </div>
+<div id="recipes-container" class="recipe-grid"></div>
 
 <div class="sidebar">
     <img id="logo" class="logo" src="../resources/logo.png" alt="Опис зображення">
@@ -42,29 +30,6 @@
     <button id="UserProfile">Особистий кабінет</button>
     <button id="Recipe">Рецепти</button>
     <button id="History">Історія та культура</button>
-</div>
-
-<h2>Рецепт вареників</h2>
-
-<img src="../resources/vareniki.webp" alt="Вареники" class="vareniki-img">
-
-<h3>Інгредієнти</h3>
-<table>
-    <tr><th>Продукт</th><th>Кількість</th></tr>
-    <tr><td>Борошно</td><td>500 г</td></tr>
-    <tr><td>Вода</td><td>250 мл</td></tr>
-    <tr><td>Яйце</td><td>1 шт.</td></tr>
-    <tr><td>Сіль</td><td>1/2 ч. л.</td></tr>
-    <tr><td>Картопля</td><td>3-4 шт.</td></tr>
-    <tr><td>Цибуля</td><td>1 шт.</td></tr>
-    <tr><td>Сир (або інша начинка)</td><td>200 г</td></tr>
-    <tr><td>Масло</td><td>30 г</td></tr>
-    <tr><td>Сметана</td><td>за смаком</td></tr>
-</table>
-
-<h2>Спосіб приготування</h2>
-<div class="recipe">
-    <p>Для тіста змішати борошно, воду, яйце та сіль. Замісити еластичне тісто, накрити рушником і залишити на 20 хвилин. Для начинки відварити картоплю, потовкти її, обсмажити цибулю, додати до картоплі та перемішати. Формувати вареники, заповнюючи тісто начинкою. Варити в киплячій підсоленій воді 5-7 хвилин. Подавати гарячими зі сметаною.</p>
 </div>
 </body>
 <script src="../Scripts/catalog.js"></script>

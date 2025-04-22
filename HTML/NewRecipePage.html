@@ -3,10 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Styles/sidebar.css">
+    <link rel="stylesheet" href="../Styles/newRecipePage.css">
     <title>Створення рецепта</title>
 </head>
 <body>
+<div class="information">
+    <form id="recipe-form" method="POST">
+    <!-- Введення імені рецепту -->
+    <label for="recipe-name">Ім'я рецепту:</label>
+    <input type="text" class="name" id="recipe-name" required>
 
+    <!-- Введення опису рецепту -->
+    <label for="recipe-recipe">Опис рецепту:</label>
+    <textarea class="recipe" id="recipe-recipe" required></textarea>
+
+    <!-- Вибір аватару -->
+    <label for="recipe-photo">Додайте фото:</label>
+    <input type="file" id="recipe-photo" name="photo" accept="image/*" required>
+
+    <!-- Вставка YouTube відео -->
+    <label for="recipe-video">Вставте посилання на YouTube відео:</label>
+    <input type="url" id="recipe-video" name="youtube-link" >
+
+    <!-- Динамічна таблиця -->
+    <table id="dynamic-table" border="1">
+        <thead>
+        <tr>
+            <th>Назва інградієнти</th>
+            <th>Грамовка інградієнта</th>
+        </tr>
+        <tr>
+            <th contenteditable="true"></th>
+            <th contenteditable="true"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Рядки будуть додаватися сюди -->
+        </tbody>
+    </table>
+        <button class="addTh" id="newRowBtn" onclick="addRow()">Додати рядок</button>
+
+    <!-- Кнопка для створення рецепту -->
+    <button class="submit" id="submit" type="submit">Створити рецепт</button>
+</form>
+</div>
 <div class="sidebar">
     <img id="logo" class="logo" src="../resources/logo.png" alt="Опис зображення">
     <button id="UserProfile">Особистий кабінет</button>
@@ -15,4 +55,5 @@
 </div>
 </body>
 <script src="../Scripts/sidebar.js"></script>
+<script src="../Scripts/newRecipePage.js"></script>
 </html>

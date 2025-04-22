@@ -7,21 +7,24 @@
 </head>
 <body>
 <div class="authWrapper">
+    <embed ></embed>
     <h1>Реєстрація</h1>
-    <div id="loginError" class="error"></div>
-    <input id="login" placeholder="Введіть свій логін">
+    <form id="registrationForm">
+        <label id="loginError" class="error"></label>
+        <input id="login" placeholder="Введіть свій логін">
 
-    <div id="emailError" class="error"></div>
-    <input id="email"  placeholder="Введіть свою пошту">
+        <label id="emailError" class="error"></label>
+        <input id="email"  placeholder="Введіть свою пошту">
 
-    <div id="passwordError" class="error"></div>
-    <input id="password"  placeholder="Введіть свій пароль">
+        <label id="passwordError" class="error"></label>
+        <input id="password"  placeholder="Введіть свій пароль">
 
-    <div id="passwordError2" class="error"></div>
-    <input id="password2" placeholder="Введіть свій пароль знову">
+        <label id="passwordError2" class="error"></label>
+        <input id="password2" placeholder="Введіть свій пароль знову">
 
-    <button>Створити новий акаунт</button>
+        <button id="submit" type="submit">Створити новий акаунт</button>
+    </form>
 </div>
-<script src="../Scripts/reistration.js"></script>
 </body>
+<script src="../Scripts/reistration.js"></script>
 </html>

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* Кнопки в хедері */
+.settingBtn {
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+}
+.outBtn{
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.outBtn:hover{
+    background-color: #c9302c;
+}
+.settingBtn:hover{
+    background-color: #d6a900;
+}
+
+/* Основний блок */
+.main-block {
+    padding-top: 100px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #fddf3f;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Плавна анімація */
+}
+
+.avatar:hover {
+    transform: scale(1.2);
+}
+
+.userName {
+    font-family: "Pacifico", cursive;
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+h1{
+    padding-left: 200px;
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-size: 40px;
+    font-style: normal;
+    text-align: center;
+}
+h2{
+
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-size: 35px;
+    font-style: normal;
+    text-align: center;
+}
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color:  rgba(200, 200, 200, 0.6);
+}
+.header-buttons{
+    padding-left: 200px;
+}
+.justLabel{
+    font-family: "Pacifico", cursive;
+    font-size: 25px;
+}
+.aboutMe {
+    font-family: "Pacifico", cursive;
+    display: block;
+    width: 40vw;
+    min-height: 30vh;
+    height: auto;
+    background-color: rgba(200, 200, 200, 0.6);
+    color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px auto; /* ОЦЕ — головне: авто зліва і справа = по центру */
+    overflow-y: auto;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap; /* Щоб зберегти переноси рядків */
+}
+h1{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+.recipe-grid {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.recipe-card {
+    position: relative;
+    width: 60%;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+.recipe-card .photo {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.like-button {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: white;
+    border-radius: 40%;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+    width: 60px;  /* розмір картинки */
+    height: 60px; /* розмір картинки */
+    transition: transform 0.2s ease;
+
+}
+
+.like-button:hover {
+    transform: scale(1.2);
+}
+
+iframe{
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 72%;
+    height: 450px;
+}

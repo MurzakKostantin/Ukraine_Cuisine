@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Налаштування</title>
+  <link rel="stylesheet" href="../Styles/sidebar.css">
+  <link rel="stylesheet" href="../Styles/settings.css">
+</head>
+<body>
+  <h1>Налаштування профілю</h1>
+
+  <form id="profile-form">
+    <div class="avatar-section">
+      <img class="avatar" id="avatar" alt="Avatar" />
+      <input type="file" id="fileInput" style="display:none" accept="image/*">
+
+    </div>
+    <div class="info-section">
+      <label for="name">Ім'я:</label>
+      <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required maxlength="50">
+      <span id="name-count">0/50</span>
+
+      <label for="aboutMe">Про себе:</label>
+      <textarea id="aboutMe" name="aboutMe" placeholder="Розкажіть про себе" required maxlength="500"></textarea>
+      <span id="aboutMe-count">0/500</span>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Введіть ваш email" required maxlength="50">
+      <span id="email-count">0/50</span>
+
+      <label>Відображення обраних рецептів </label>
+      <input type="checkbox" id="demo1" class="demo1">
+      <label for="demo1" data-on-label="Ввім." data-off-label="Вимк." class="demo1-label"></label>
+
+      <label>Відображення доданих рецептів </label>
+      <input type="checkbox" id="demo2" class="demo2">
+      <label for="demo2" data-on-label="Ввім." data-off-label="Вимк." class="demo2-label"></label>
+    </div>
+
+    <button type="submit" id="save-btn" class="save-btn">Зберегти</button>
+  </form>
+
+  <div class="sidebar">
+    <img id="logo" class="logo" src="../resources/logo.png" alt="Опис зображення">
+    <button id="UserProfile">Особистий кабінет</button>
+    <button id="Recipe">Рецепти</button>
+    <button id="History">Історія та культура</button>
+  </div>
+
+  <script src="../Scripts/sidebar.js"></script>
+  <script src="../Scripts/settings.js"></script>
+
+</body>
+</html>

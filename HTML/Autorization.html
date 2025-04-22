@@ -8,15 +8,16 @@
 <body>
 <div class="authWrapper">
     <h1>Вхід в особистий кабінет</h1>
-    <form id="loginForm">
-        <div id="emailError" class="error"></div>
-        <label for="email"></label><input id="email" placeholder="Введіть свою пошту" class="formInput">
+    <form id="loginForm" method="POST" action="/api/server.js">
 
-        <div id="passwordError" class="error"></div>
-        <label for="password"></label><input id="password" placeholder="Введіть свій пароль" class="formInput">
+        <label id="emailError" for="email"></label>
+        <input id="email" type="text" name="username" placeholder="Введіть свою пошту" class="formInput">
+
+        <label id="passwordError" for="password"></label>
+        <input id="password" type="text" name="userPassword" placeholder="Введіть свій пароль" class="formInput">
 
         <button id="submit">Зайти</button>
-        <button id="createNewAccount" class="createNewAccount">Новий акаунт</button>
+        <button type="submit" id="createNewAccount" class="createNewAccount">Новий акаунт</button>
     </form>
 </div>
 </body>
