@@ -12,15 +12,15 @@ const PORT  = 3000;
 
 app.use(cors());
 app.use(express.json());
-
+app.use("/api", router);
 // Налаштування Multer для збереження файлів
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 require("dotenv").config();
 
-const supabaseUrl = process.env.supabaseUrl;
-const supabaseKey = process.env.supabaseKey;
+const supabaseUrl = process.env.NEXT_PUBLIC_supabaseUrl;
+const supabaseKey = process.env.NEXT_PUBLIC_supabaseKey;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Логін користувача
