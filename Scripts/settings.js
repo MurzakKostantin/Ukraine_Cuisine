@@ -73,7 +73,7 @@ document.getElementById("save-btn").addEventListener("click", async function (ev
     }
 
 
-    fetch('http://localhost:3000/update-profile', {
+    fetch('https://ukraine-cuisine.vercel.app/api/update-profile', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ document.getElementById("save-btn").addEventListener("click", async function (ev
     const formData =  new FormData();
     formData.append('avatar', fileInput);
     formData.append('userId', userId );
-    fetch('http://localhost:3000/upload-avatar', {
+    fetch('https://ukraine-cuisine.vercel.app/api/upload-avatar', {
         method: 'POST',
         body: formData
     })

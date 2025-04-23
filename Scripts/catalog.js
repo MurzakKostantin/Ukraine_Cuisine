@@ -59,7 +59,7 @@ function renderRecipes(recipes) {
 `;
 
         const likeBtn = card.querySelector(".like-button");
-        fetch(`http://localhost:3000/if-user-like`,  {
+        fetch(`https://ukraine-cuisine.vercel.app/api/if-user-like`,  {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -91,7 +91,7 @@ function renderRecipes(recipes) {
                 likeBtn.src = "../resources/heart.png";
             }
 
-            fetch('http://localhost:3000/update-recipes-likes', {
+            fetch('https://ukraine-cuisine.vercel.app/api/update-recipes-likes', {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
@@ -109,7 +109,7 @@ function renderRecipes(recipes) {
                     console.error("Помилка оновлення лайків:", err);
                 });
 
-            fetch('http://localhost:3000/add-user-recipe', {
+            fetch('https://ukraine-cuisine.vercel.app/api/add-user-recipe', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

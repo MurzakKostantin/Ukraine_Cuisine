@@ -39,7 +39,7 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
         alert("Заповніть будь-ласка усі поля та переконайтеся, що паролі співпадають.");
     } else {
         // Відправка даних на сервер
-        const response = await fetch("http://localhost:3000/register", {
+        const response = await fetch("https://ukraine-cuisine.vercel.app/api/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

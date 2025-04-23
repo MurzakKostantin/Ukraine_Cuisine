@@ -40,7 +40,7 @@ document.getElementById("submit").addEventListener("click", async function(event
 
     const fileInput = document.getElementById('recipe-photo').files[0];
 
-    fetch('http://localhost:3000/add-recipe', {
+    fetch('https://ukraine-cuisine.vercel.app/api/add-recipe', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ document.getElementById("submit").addEventListener("click", async function(event
                 formData.append('recipe-photo', fileInput); // fileInput — це ваш input типу "file"
                 formData.append('name',name);
                 //
-                fetch('http://localhost:3000/update-recipe-photo', {
+                fetch('https://ukraine-cuisine.vercel.app/api/update-recipe-photo', {
                     method: 'POST',
                     body: formData
                 })

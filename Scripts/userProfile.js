@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 async function getResipes() {
-    const response = await fetch("http://localhost:3000/recipes");
+    const response = await fetch("https://ukraine-cuisine.vercel.app/api/recipes");
     const result = await response.json();
     if (!result.success) throw new Error(result.message);
     return result;
@@ -47,7 +47,7 @@ function renderLikeRecipes(recipes) {
     const userData = JSON.parse(localStorage.getItem("user"));
 
     recipes.forEach(recipe => {
-        fetch(`http://localhost:3000/if-user-like`, {
+        fetch(`https://ukraine-cuisine.vercel.app/api/if-user-like`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -111,7 +111,7 @@ function renderLikeRecipes(recipes) {
                             likeBtn.src = "../resources/heart.png";
                         }
 
-                        fetch('http://localhost:3000/update-recipes-likes', {
+                        fetch('https://ukraine-cuisine.vercel.app/api/update-recipes-likes', {
                             method: 'PATCH',
                             headers: {
                                 'Content-Type': 'application/json'
@@ -129,7 +129,7 @@ function renderLikeRecipes(recipes) {
                                 console.error("Помилка оновлення лайків:", err);
                             });
 
-                        fetch('http://localhost:3000/add-user-recipe', {
+                        fetch('https://ukraine-cuisine.vercel.app/api/add-user-recipe', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
@@ -186,7 +186,7 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
     formData.append('avatar', fileInput); // fileInput — це ваш input типу "file"
     formData.append('userId', userId ); // ID користувача
 
-    fetch('http://localhost:3000/upload-avatar', {
+    fetch('https://ukraine-cuisine.vercel.app/api/upload-avatar', {
         method: 'POST',
         body: formData
     })
