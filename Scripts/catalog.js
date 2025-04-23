@@ -3,7 +3,7 @@ let allRecipes = [];
 addEventListener("DOMContentLoaded", loadRecipes);
 
 async function getResipes() {
-    const response = await fetch("http://localhost:3000/recipes");
+    const response = await fetch("https://ukraine-cuisine.vercel.app/api/recipes");
     const result = await response.json();
     if (!result.success) throw new Error(result.message);
     return result;
