@@ -23,7 +23,7 @@ body {
 }
 .error {
     color: red;
-    font-size: 14px;
+    font-size: 16px;
 }
 button {
     padding: 10px;
@@ -41,4 +41,38 @@ button.createNewAccount {
 .map{
     position: relative;
     text-align: center;
+}
+@media (max-width: 1000px) {
+    .authWrapper {
+        width: 90vw; /* майже на весь екран */
+        padding: 5vw;
+        border-radius: 5vw;
+    }
+
+    .formInput {
+        width: 100%;
+        padding: 5vw;
+        font-size: 5vw;
+        margin: 5vw 0;
+    }
+
+    button {
+        width: 100%;
+        padding: 5vw;
+        font-size: 5vw;
+        margin-top: 5vw;
+    }
+
+    button.createNewAccount {
+        padding: 5vw;
+        font-size: 5vw;
+    }
+    .error {
+        color: red;
+        font-size: 3vw;
+    }
+    h1 {
+        font-size: 7vw;
+        margin-bottom: 5vw;
+    }
 }

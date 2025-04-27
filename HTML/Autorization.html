@@ -10,10 +10,10 @@
     <h1>Вхід в особистий кабінет</h1>
     <form id="loginForm" method="POST" action="/api/server.js">
 
-        <label id="emailError" for="email"></label>
+        <label class="error" id="emailError" for="email"></label>
         <input id="email" type="text" name="username" placeholder="Введіть свою пошту" class="formInput">
 
-        <label id="passwordError" for="password"></label>
+        <label  class="error" id="passwordError" for="password"></label>
         <input id="password" type="text" name="userPassword" placeholder="Введіть свій пароль" class="formInput">
 
         <button id="submit">Зайти</button>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 .sidebar{
     position: fixed;
     top: 0; /* Відстань від верхнього краю */
@@ -21,7 +22,7 @@
 .logo:hover {
     transform: scale(1.15);
 }
-.sidebar button:not(.newRecipeBtn){
+.sidebar button:not(.newRecipeBtn,.toggle-sidebar-btn){
     text-align: left;
     border: none;
     text-decoration: none;
@@ -45,16 +46,101 @@
     border-radius: 150px;
     transition: transform 0.3s ease; /* Плавна анімація */
 }
-.newRecipeBtn:hover{
+.newRecipeBtn:hover {
     background-color: rgba(99, 227, 106, 0.51);
     transform: scale(1.15);
 }
+
 /* Зміна кольору при наведенні */
-.sidebar button:hover:not(.newRecipeBtn) {
+.sidebar button:hover:not(.newRecipeBtn,.toggle-sidebar-btn) {
     background-color: #45a049; /* Темніший зелений колір */
 }
 /* Основний контент */
 body {
     margin-left: 200px; /* Відступ для контенту, щоб він не перекривав сайдбар */
     padding: 20px;
+}
+.toggle-sidebar-btn{
+    width: 70px;
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    /* Сховати сайдбар за межами екрану */
+    .sidebar.hidden {
+        padding-top: 80px;
+        left: 100%;
+        transition: left 0.3s ease;
+    }
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Або center, якщо хочеш відцентрувати вертикально */
+        background-color: rgba(181, 181, 181, 0.36);
+        width: 40vw;
+        padding-top: 80px;
+        position: fixed;
+        transition: left 0.3s ease;
+        left: calc(100% - 40%);
+        right: 0;
+    }
+
+    .toggle-sidebar-btn:hover {
+        transform: scale(1.15);
+    }
+    .toggle-sidebar-btn.hidden {
+        width: 18vw;
+        transition: width 0.3s ease ;
+    }
+    /* Показати кнопку згортання */
+    .toggle-sidebar-btn {
+        transition: width 0.3s ease ;
+        width: 35vw;
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        padding: 10px 15px;
+        font-size: 40px;
+        background-color: #18a3dd;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .sidebar button:not(.newRecipeBtn,.toggle-sidebar-btn){
+        text-align: center;
+        border: none;
+        text-decoration: none;
+        border-radius: 5vh ;
+        width: 95%;
+        height: 10vh;
+        font-size: 3vh; /* Розмір шрифта */
+        background-color: rgba(99, 98, 98, 0.42);
+        color: #ffffff;
+        position: relative;
+        margin-top: 5vh;
+    }
+    .UserProfile, .Recipe,.History{
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    .logo{
+        position: relative;
+        margin: 2vh auto -2vh; /* автоцентр у флекс-контейнері */
+        width: 15vh;
+        height: 15vh;
+        left: 0;
+    }
+    /* Зменшити відступ контенту */
+    body {
+        margin-right: 40vw;
+        margin-left: 0;
+    }
+    body.hidden{
+        margin-right:0 ;
+        margin-left: 0;
+        transition: margin-left 0.3s ease;
+    }
 }

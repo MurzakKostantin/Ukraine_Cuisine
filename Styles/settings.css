@@ -134,7 +134,6 @@ input:focus {
     background: linear-gradient(45deg, #388E3C, #1B5E20);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
-
 }
 
 .save-btn:active {
@@ -174,4 +173,74 @@ span {
     font-size: 14px;
     color: #666;
     margin-left: 10px;
+}
+@media (max-width: 1000px) {
+    body {
+        padding: 5vw;
+        gap: 5vw;
+        align-items: center; /* Центруємо елементи */
+        height: 100vh; /* Додаємо висоту, щоб flex міг правильно центровано працювати */
+    }
+    .info-section {
+        padding: 5vw;
+        border-radius: 5vw;
+        max-width:100%;
+    }
+    .avatar-section, .setting-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .avatar{
+        width: 30vw;
+        height: 30vw;
+    }
+    input, textarea {
+        font-size: 5vw;
+        padding: 5vw;
+        border-radius: 5vw;
+    }
+
+    h1 {
+        font-size: 8vw;
+        padding-bottom: 5vw;
+    }
+
+    .save-btn {
+        padding: 4vw 8vw;
+        font-size: 5vw;
+        border-radius: 10vw;
+        margin-top: 5vw;
+        margin-bottom: 2vw;
+    }
+
+    /* Адаптація світчів */
+    .demo1 + label, .demo2 + label {
+        width: 20vw;
+        height: 8vw;
+        border-radius: 4vw;
+    }
+
+    .demo1 + label::before, .demo2 + label::before {
+        font-size: 3vw;
+        top: 2vw;
+        right: 2vw;
+    }
+
+    .demo1 + label::after, .demo2 + label::after {
+        width: 6vw;
+        height: 6vw;
+        top: 1vw;
+        left: 1vw;
+    }
+
+    .demo1:checked + label::after, .demo2:checked + label::after {
+        left: 12vw;
+    }
+
+    span {
+        font-size: 4vw;
+        margin-left: 2vw;
+    }
 }

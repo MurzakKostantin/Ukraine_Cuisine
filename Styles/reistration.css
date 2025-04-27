@@ -31,3 +31,40 @@ button {
     border: none;
     cursor: pointer;
 }
+@media (max-width: 1000px) {
+    .authWrapper {
+        width: 85%;
+        max-height: 90%;
+        padding: 5vw;
+        border-radius: 5vw;
+    }
+
+    form {
+        width: 95%;
+    }
+
+    input {
+        width: 100%;
+        padding: 5vw;
+        font-size: 5vw;
+        margin: 5vw 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 5vw;
+        font-size: 5vw;
+        margin-top: 5vw;
+        border-radius: 5vw;
+    }
+
+    h1 {
+        font-size: 7vw;
+        margin-bottom: 5vw;
+    }
+
+    label.error {
+        font-size: 4vw;
+    }
+}

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Налаштування</title>
   <link rel="stylesheet" href="../Styles/sidebar.css">
   <link rel="stylesheet" href="../Styles/settings.css">
@@ -9,7 +10,7 @@
 <body>
   <h1>Налаштування профілю</h1>
 
-  <form id="profile-form">
+  <form class="setting-form" id="profile-form">
     <div class="avatar-section">
       <img class="avatar" id="avatar" alt="Avatar" />
       <input type="file" id="fileInput" style="display:none" accept="image/*">
@@ -40,7 +41,8 @@
     <button type="submit" id="save-btn" class="save-btn">Зберегти</button>
   </form>
 
-  <div class="sidebar">
+  <div id="sidebar" class="sidebar">
+    <button id="toggleSidebarBtn" class="toggle-sidebar-btn">≡</button>
     <img id="logo" class="logo" src="../resources/logo.png" alt="Опис зображення">
     <button id="UserProfile">Особистий кабінет</button>
     <button id="Recipe">Рецепти</button>

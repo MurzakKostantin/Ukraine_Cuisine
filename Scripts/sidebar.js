@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const historyBtn = document.getElementById("History");
     const img = document.getElementById("logo");
     const newRecipeBtn = document.getElementById("newRecipeBtn");
-
+    const toggleSidebarBtn = document.getElementById("toggleSidebarBtn");
+    const sidebar = document.querySelector(".sidebar");
     userProfileBtn.addEventListener("click", function () {
             window.location.href = "../HTML/UserProfile.html";
     });
@@ -21,9 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
     historyBtn.addEventListener("click", function () {
         window.location.href = "../HTML/History.html";
     });
-
+    toggleSidebarBtn.addEventListener("click", function () {
+        if (sidebar) {
+                sidebar.classList.toggle("hidden");
+                document.body.classList.toggle('hidden');
+                toggleSidebarBtn.classList.toggle("hidden");
+        } else {
+            console.error("Sidebar element not found!");
+        }
+    });
     newRecipeBtn.addEventListener("click", function () {
         window.location.href = "../HTML/NewRecipePage.html";
     });
+
 
 });

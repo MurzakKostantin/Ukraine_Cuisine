@@ -69,3 +69,62 @@ th, td {
 .addTh:hover{
     background-color: #707070;
 }
+@media (max-width: 1000px) {
+    body {
+        padding: 5vw;
+        margin-top: 20vw;
+        align-items: center;
+    }
+
+    .information {
+        width: 90vw;
+        padding: 5vw;
+        border-radius: 5vw;
+    }
+
+    input,
+    .addTh,
+    textarea,
+    .submit {
+        font-size: 5vw;
+        padding: 5vw;
+        margin-bottom: 5vw;
+    }
+    .information table {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+    table, th, td {
+        word-wrap: break-word;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+    table {
+        font-size: 4vw;
+    }
+
+    th, td {
+        padding: 4vw;
+    }
+
+    .submit, .addTh {
+        padding: 5vw;
+        font-size: 5vw;
+        border-radius: 5vw;
+    }
+    .addTh{
+        padding-bottom: 5vw;
+        width: 100%;
+        resize: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    label {
+        font-size: 5vw;
+    }
+}
