@@ -5,7 +5,6 @@ img{
 }
 body {
     font-family: 'Segoe UI', sans-serif;
-    margin-left:  200px;
     padding: 20px;
     background-color: #f9f7f3;
     color: #333;
@@ -126,4 +125,74 @@ iframe{
     border-radius: 20px;
     width: 72%;
     height: 450px;
+}
+/* Загальний стиль хедера */
+.header {
+    width: 100%;
+    background-color: rgba(200, 200, 200, 0.6);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Кнопки в хедері */
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.settingBtn,
+.outBtn {
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.settingBtn:hover,
+.outBtn:hover {
+    background-color: #d6a900;
+}
+
+/* Стилі для адаптивності */
+@media (max-width: 1000px) {
+    .header {
+        background-color: rgba(255, 255, 255, 0.8); /* Легший фон для мобільних */
+        backdrop-filter: blur(8px); /* Легке розмиття */
+        padding: 15px 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .header-buttons {
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .settingBtn,
+    .outBtn {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+    }
 }

@@ -162,24 +162,6 @@ input[type="radio"]{
 .arrows label{
     transition: opacity 0.2s ease-out;
 }
-
-@media (max-width: 480px) {
-    .arrows label {
-        width: 25px;
-        height: 25px;
-    }
-    .slide h2 {
-        font-size: 1.2em;
-        padding: 6px 0;
-    }
-    .dots {
-        margin-top: 16%;
-    }
-    .dots label {
-        width: 10px;
-        height: 10px;
-    }
-}
 .ukraine-map {
     position: absolute;
     pointer-events: auto; /* Включає взаємодію */
@@ -193,6 +175,11 @@ input[type="radio"]{
 .region:hover {
     transform: scale(1.2);
 }
+
+.mobile-title{
+    display: none;
+}
+
 .parallax {
     background-image: url("../resources/ovochi.jpg");
     height: 100vh;
@@ -201,7 +188,6 @@ input[type="radio"]{
     background-size: cover;
     width: 100%;
 }
-
 .zakarpattia { width: 200px; top: 510px; left: 100px; }
 .lvivska { width: 220px; top: 300px; left: 140px; }
 .ivanofrankivska { width: 160px; top: 440px; left: 230px; }
@@ -210,20 +196,79 @@ input[type="radio"]{
 .volynska { width: 200px; top: 140px; left: 220px; }
 .rivnenska { width: 180px; top: 160px; left: 380px; }
 .khmelnytska { width: 170px; top: 320px; left: 450px; }
-.vinnytska { width: 220px; top: 430px; left: 590px; }
+
 .zhytomyrska { width: 210px; top: 160px; left: 570px; }
 .kyivska { width: 220px; top: 210px; left: 750px; }
 .chernihivska { width: 210px; top: 90px; left: 870px; }
 .sumska { width: 200px; top: 80px; left: 1080px; }
+
+.vinnytska { width: 220px; top: 430px; left: 590px; }
 .poltavska { width: 300px; top: 310px; left: 990px; }
 .cherkaska { width: 250px; top: 390px; left: 790px; }
 .kirovohradska { width: 310px; top: 530px; left: 810px; }
 .dnipropetrovska { width: 300px; top: 550px; left: 1080px; }
+
 .kharkivska { width: 280px; top: 310px; left: 1260px; }
 .luhanska { width: 210px; top: 360px; left: 1540px; }
 .donetska { width: 230px; top: 530px; left: 1400px; }
+
 .zaporizka { width: 260px; top: 720px; left: 1190px; }
 .khersonska { width: 320px; top: 780px; left: 950px; }
 .mikolayivska { width: 260px; top: 680px; left: 800px; }
 .odeska { width: 260px; top: 660px; left: 600px; }
 .crimea { width: 350px; top: 980px; left: 1020px; }
+@media (max-width: 1000px) {
+    .slider{
+        display: none;
+        align-items: center;
+    }
+    .zakarpattia { width: 200px; top: 510px; left: 10px; }
+    .lvivska { width: 220px; top: 300px; left: 50px; }
+    .ivanofrankivska { width: 160px; top: 440px; left: 140px; }
+    .ternopilska { width: 150px; top: 350px; left: 230px; }
+    .chernivetska { width: 200px; top: 570px; left: 270px; }
+    .volynska { width: 200px; top: 140px; left: 130px; }
+    .rivnenska { width: 180px; top: 160px; left: 290px; }
+    .khmelnytska { width: 170px; top: 320px; left: 360px; }
+
+    .zhytomyrska { width: 210px; top: 760px; left: 10px; }
+    .kyivska { width: 220px; top: 810px; left: 190px; }
+    .chernihivska { width: 210px; top: 690px; left: 310px; }
+    .sumska { width: 200px; top: 680px; left: 520px; }
+
+    .vinnytska { width: 220px; top: 1430px; left: 10px; }
+    .poltavska { width: 300px; top: 1310px; left: 410px; }
+    .cherkaska { width: 250px; top: 1390px; left: 210px; }
+    .kirovohradska { width: 310px; top: 1530px; left: 230px; }
+    .dnipropetrovska { width: 300px; top: 1550px; left: 500px; }
+
+    .kharkivska { width: 280px; top: 2010px; left: 10px; }
+    .luhanska { width: 210px; top: 2060px; left: 290px; }
+    .donetska { width: 230px; top: 2230px; left: 150px; }
+
+    .zaporizka { width: 260px; top: 2720px; left: 600px; }
+    .khersonska { width: 320px; top: 2780px; left: 360px; }
+    .mikolayivska { width: 260px; top: 2680px; left: 210px; }
+    .odeska { width: 260px; top: 2660px; left: 10px; }
+    .crimea { width: 350px; top: 2980px; left: 430px; }
+
+    .ukraine-map {
+        position: relative;
+        pointer-events: auto;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Вирівнює по вертикалі */
+        align-items: center; /* Вирівнює по горизонталі */
+    }
+
+    .mobile-title {
+        display: block; /* Переключити на видимий стан для мобільних */
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-size: 32px;
+        text-align: center;
+        margin: 20px 0; /* Додає відступи між заголовками */
+    }
+}

@@ -57,7 +57,6 @@
 }
 
 h1{
-    padding-left: 200px;
     font-family: "Pacifico", cursive;
     font-weight: 500;
     font-size: 40px;
@@ -72,16 +71,7 @@ h2{
     font-style: normal;
     text-align: center;
 }
-.header{
-    width: 100%;
-    position: relative;
-    top: 0;
-    right: 0;
-    background-color:  rgba(200, 200, 200, 0.6);
-}
-.header-buttons{
-    padding-left: 200px;
-}
+
 .justLabel{
     font-family: "Pacifico", cursive;
     font-size: 25px;
@@ -105,12 +95,7 @@ h2{
     overflow-wrap: break-word;
     white-space: pre-wrap; /* Щоб зберегти переноси рядків */
 }
-h1{
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-}
+
 /*КАРТОЧКИ РЕЦЕПТІВ*/
 .recipe-grid {
     align-items: center;
@@ -177,7 +162,7 @@ iframe{
     width: 72%;
     height: 450px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .header {
         width: 100%;
         background-color: rgba(255, 255, 255, 0.2); /* Прозорий фон */
@@ -185,20 +170,26 @@ iframe{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 15px 10px;
+        padding: 15px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+        margin-bottom: -10vh;
     }
-
+    .aboutMe{
+        width: 90%;
+        height: auto;
+    }
     /* Заголовок по центру */
     .header h1 {
         font-family: "Pacifico", cursive;
-        font-size: 32px;
+        font-size: 8vw;
         color: #333;
-        margin: 10px 0;
         text-align: center;
     }
-
+    .avatar{
+        margin-top: 0;
+        width: 40vw;
+        height: 40vw;
+    }
     /* Кнопки */
     .header-buttons {
         display: flex;
@@ -210,9 +201,9 @@ iframe{
 
     .settingBtn,
     .outBtn {
-        padding: 10px 15px;
-        font-size: 16px;
-        border-radius: 8px;
+        padding: 4vw 10vw;
+        font-size: 30px;
+        border-radius: 15px;
         border: none;
         cursor: pointer;
         transition: background-color 0.3s;
