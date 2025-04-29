@@ -224,6 +224,17 @@ input[type="radio"]{
         flex-direction: column;
         align-items: center;
     }
+    .arrows label {
+        height: 12vw;
+        width: 12vw;
+    }
+    .arrows{
+        position: absolute;
+        top: 70%;
+    }
+    .slider{
+        position: relative;  /* Це створить новий контекст позиціонування */
+    }
     .line{
         display: none;
     }
@@ -250,7 +261,9 @@ input[type="radio"]{
         left: auto !important;
         margin-bottom: 20px; /* Додатковий відступ знизу */
     }
-
+    .slider{
+        padding-top:0 ;
+    }
     .region img {
         width: 100%;
         height: auto;
