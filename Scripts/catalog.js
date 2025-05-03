@@ -59,81 +59,83 @@ function renderRecipes(recipes) {
 `;
 
         const likeBtn = card.querySelector(".like-button");
-        fetch(`https://ukraine-cuisine.vercel.app/api/if-user-like`,  {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                userId: userData.id,
-                recipeId: recipe.id,
+        if(localStorage.getItem("user")){
+            fetch(`https://ukraine-cuisine.vercel.app/api/if-user-like`,  {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    userId: userData.id,
+                    recipeId: recipe.id,
+                })
             })
-        })
-            .then(res => res.json())
-            .then(data => {
-                isLiked = data.isLiked;
-                if (isLiked && localStorage.getItem("user")) {
-                    likeBtn.src = "../resources/heart-like.png";
-                } else {
-                    likeBtn.src = "../resources/heart.png";
-                }
+                .then(res => res.json())
+                .then(data => {
+                    isLiked = data.isLiked;
+                    if (isLiked) {
+                        likeBtn.src = "../resources/heart-like.png";
+                    } else {
+                        likeBtn.src = "../resources/heart.png";
+                    }
+                });
+            likeBtn.addEventListener("click", () => {
+                let like;
+
+                    if(likeBtn.src.includes("resources/heart.png"))
+                    {
+                        like=1;
+                        likeBtn.src = "../resources/heart-like.png";
+                    }
+                    else if(likeBtn.src.includes("resources/heart-like.png"))
+                    {
+                        like=-1;
+                        likeBtn.src = "../resources/heart.png";
+                    }
+
+                    fetch('https://ukraine-cuisine.vercel.app/api/update-recipes-likes', {
+                        method: 'PATCH',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            id: recipe.id,
+                            like: like
+                        })
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log("Сервер відповів:", data);
+                        })
+                        .catch(err => {
+                            console.error("Помилка оновлення лайків:", err);
+                        });
+
+                    fetch('https://ukraine-cuisine.vercel.app/api/add-user-recipe', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            userId: userData.id,
+                            recipeId: recipe.id,
+                            like: like
+                        })
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log("Сервер відповів:", data);
+                        })
+                        .catch(err => {
+                            console.error("Помилка оновлення лайків:", err);
+                        });
             });
-        likeBtn.addEventListener("click", () => {
-           let like;
-           if(localStorage.getItem("user")) {
-               if(likeBtn.src.includes("resources/heart.png"))
-               {
-                   like=1;
-                   likeBtn.src = "../resources/heart-like.png";
-               }
-               else if(likeBtn.src.includes("resources/heart-like.png"))
-               {
-                   like=-1;
-                   likeBtn.src = "../resources/heart.png";
-               }
+        }
+        else {
+            likeBtn.src = "../resources/heart.png";
+            likeBtn.addEventListener("click", () => {window.location.href = "../HTML/Authorization.html";});
+        }
 
-               fetch('https://ukraine-cuisine.vercel.app/api/update-recipes-likes', {
-                   method: 'PATCH',
-                   headers: {
-                       'Content-Type': 'application/json'
-                   },
-                   body: JSON.stringify({
-                       id: recipe.id,
-                       like: like
-                   })
-               })
-                   .then(res => res.json())
-                   .then(data => {
-                       console.log("Сервер відповів:", data);
-                   })
-                   .catch(err => {
-                       console.error("Помилка оновлення лайків:", err);
-                   });
-
-               fetch('https://ukraine-cuisine.vercel.app/api/add-user-recipe', {
-                   method: 'POST',
-                   headers: {
-                       'Content-Type': 'application/json'
-                   },
-                   body: JSON.stringify({
-                       userId: userData.id,
-                       recipeId: recipe.id,
-                       like: like
-                   })
-               })
-                   .then(res => res.json())
-                   .then(data => {
-                       console.log("Сервер відповів:", data);
-                   })
-                   .catch(err => {
-                       console.error("Помилка оновлення лайків:", err);
-                   });
-           }
-           else{
-               window.location.href = "../HTML/Authorization.html";
-           }
-
-        });
         container.appendChild(card);
     });
 }
