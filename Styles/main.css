@@ -279,7 +279,7 @@ input[type="radio"]{
 .parallax {
     max-height: 1024px;
     max-width: 1024px;
-    margin: 0 auto 90vh; /* Центрує по горизонталі */
+    margin: 0 auto 100vh; /* Центрує по горизонталі */
     position: relative;
     width: 100%;
 }
