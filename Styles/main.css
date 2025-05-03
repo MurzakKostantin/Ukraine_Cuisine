@@ -179,15 +179,6 @@ input[type="radio"]{
 .mobile-title{
     display: none;
 }
-
-.parallax {
-    background-image: url("../resources/ovochi.jpg");
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-}
 .zakarpattia { width: 200px; top: 510px; left: 100px; }
 .lvivska { width: 220px; top: 300px; left: 140px; }
 .ivanofrankivska { width: 160px; top: 440px; left: 230px; }
@@ -257,7 +248,7 @@ input[type="radio"]{
         position: relative;
         width: 50%; /* або будь-яка інша ширина */
         height: auto;
-        top: auto !important;
+        top: auto;
         left: auto !important;
         margin-bottom: 20px; /* Додатковий відступ знизу */
     }
@@ -277,4 +268,34 @@ input[type="radio"]{
         text-align: center;
         margin: 20px 0; /* Додає відступи між заголовками */
     }
+}
+/*.parallax-container{*/
+/*    max-height: 1024px;*/
+/*    max-width: 1024px;*/
+/*    margin: 0 auto 105%; !* Центрує по горизонталі *!*/
+/*    position: relative;*/
+/*    width: 100%; !* більше ніж висота екрану, щоб можна було скролити *!*/
+/*}*/
+.parallax {
+    max-height: 1024px;
+    max-width: 1024px;
+    margin: 0 auto 90vh; /* Центрує по горизонталі */
+    position: relative;
+    width: 100%;
+}
+
+.parallax img {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-out;
+    will-change: transform;
+}
+
+#back {
+    width: 100%;
+    height: auto;
+    top: 0;
+    z-index: -1;
 }

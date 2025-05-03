@@ -151,10 +151,10 @@ function sortRecipes(type) {
 
     switch (type) {
         case "id-asc":
-            sorted.sort((a, b) => a.id - b.id);
+            sorted.sort((a, b) => b.id - a.id);
             break;
         case "id-desc":
-            sorted.sort((a, b) => b.id - a.id);
+            sorted.sort((a, b) => a.id - b.id);
             break;
         case "likes-asc":
             sorted.sort((a, b) => (b.likes || 0) - (a.likes || 0));
@@ -165,7 +165,6 @@ function sortRecipes(type) {
     renderRecipes(sorted);
     console.log("сортування");
 }
-
 document.getElementById("searchBtn").addEventListener("click", function (e) {
     const searchWord = document.getElementById("search").value.toLowerCase();
     const filtered = allRecipes.filter(recipe =>

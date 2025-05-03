@@ -1,8 +1,18 @@
-window.addEventListener('scroll', function() {
-    let parallax = document.getElementById('parallax');
-    let offset = window.pageYOffset;
-    parallax.style.backgroundPositionY = offset * 0.8 + 'px'; // 0.5 - коэффициент для параллакса
-});
+const scrollEffect = () => {
+    const scrollY = window.scrollY;
+
+    document.getElementById('kasha').style.transform     = `translate(${-scrollY * 0.3}px)`;
+    document.getElementById('chtoto').style.transform    = `translate(${-scrollY * 0.3}px, ${scrollY * 0.3}px)`;
+    document.getElementById('hlib').style.transform      = `translate(${scrollY * 0.3}px, ${-scrollY * 0.3}px)`;
+    document.getElementById('kartoshka').style.transform = `translate(${-scrollY * 0.3}px, ${scrollY *0.3}px)`;
+    document.getElementById('ogirki').style.transform   = `translate(${scrollY * 0.3}px, ${scrollY * 0.3}px)`;
+    document.getElementById('salo').style.transform      = `translate(${-scrollY * 0.3}px, ${-scrollY * 0.3}px)`;
+    document.getElementById('sil').style.transform       = `translate(${scrollY * 0.3}px, ${-scrollY * 0.3}px)`;
+    document.getElementById('smetana').style.transform   = `translate(${scrollY * 0.3}px, 0px)`;
+    document.getElementById('vareniki').style.transform  = `translate(0px, ${-scrollY * 0.3}px)`;
+    document.getElementById('borsch').style.transform   = `translate(0px, ${scrollY * 0.3}px)`;
+};
+window.addEventListener('scroll', scrollEffect);
 
 function removeOnRecipe(name)
 {
