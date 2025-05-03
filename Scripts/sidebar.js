@@ -32,7 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     newRecipeBtn.addEventListener("click", function () {
-        window.location.href = "../HTML/NewRecipePage.html";
+        if(localStorage.getItem("user")){
+            window.location.href = "../HTML/NewRecipePage.html";
+        }
+        else {
+            window.location.href = "../HTML/Autorization.html";
+        }
     });
 
 
