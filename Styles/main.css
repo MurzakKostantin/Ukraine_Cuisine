@@ -269,17 +269,11 @@ input[type="radio"]{
         margin: 20px 0; /* Додає відступи між заголовками */
     }
 }
-/*.parallax-container{*/
-/*    max-height: 1024px;*/
-/*    max-width: 1024px;*/
-/*    margin: 0 auto 105%; !* Центрує по горизонталі *!*/
-/*    position: relative;*/
-/*    width: 100%; !* більше ніж висота екрану, щоб можна було скролити *!*/
-/*}*/
+
 .parallax {
     max-height: 1024px;
     max-width: 1024px;
-    margin: 0 auto 100vh; /* Центрує по горизонталі */
+    margin: 0 auto 102vh; /* Центрує по горизонталі */
     position: relative;
     width: 100%;
 }

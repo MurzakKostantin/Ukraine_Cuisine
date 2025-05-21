@@ -133,7 +133,7 @@ function renderRecipes(recipes) {
         }
         else {
             likeBtn.src = "../resources/heart.png";
-            likeBtn.addEventListener("click", () => {window.location.href = "../HTML/Authorization.html";});
+            likeBtn.addEventListener("click", () => {window.location.href = "../HTML/Autorization.html";});
         }
 
         container.appendChild(card);
