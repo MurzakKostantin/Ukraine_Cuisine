@@ -74,23 +74,23 @@ function renderRecipes(recipes) {
                 .then(data => {
                     isLiked = data.isLiked;
                     if (isLiked) {
-                        likeBtn.src = "../resources/heart-like.png";
+                        likeBtn.src = "../resources/heart-like.webp";
                     } else {
-                        likeBtn.src = "../resources/heart.png";
+                        likeBtn.src = "../resources/heart.webp";
                     }
                 });
             likeBtn.addEventListener("click", () => {
                 let like;
 
-                    if(likeBtn.src.includes("resources/heart.png"))
+                    if(likeBtn.src.includes("resources/heart.webp"))
                     {
                         like=1;
-                        likeBtn.src = "../resources/heart-like.png";
+                        likeBtn.src = "../resources/heart-like.webp";
                     }
-                    else if(likeBtn.src.includes("resources/heart-like.png"))
+                    else if(likeBtn.src.includes("resources/heart-like.webp"))
                     {
                         like=-1;
-                        likeBtn.src = "../resources/heart.png";
+                        likeBtn.src = "../resources/heart.webp";
                     }
 
                     fetch('https://ukraine-cuisine.vercel.app/api/update-recipes-likes', {
@@ -132,7 +132,7 @@ function renderRecipes(recipes) {
             });
         }
         else {
-            likeBtn.src = "../resources/heart.png";
+            likeBtn.src = "../resources/heart.webp";
             likeBtn.addEventListener("click", () => {window.location.href = "../HTML/Autorization.html";});
         }
 
