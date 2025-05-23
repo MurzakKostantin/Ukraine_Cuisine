@@ -10,6 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (user && user.name) {
             // Вивести аватарку (перевірка, якщо avatar не null)
             const avatarElement = document.getElementById("avatar");
+            img.rel = 'preload';
             avatarElement.src = user.avatar
 
             // Вивести ім’я користувача
