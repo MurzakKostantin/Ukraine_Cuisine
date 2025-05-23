@@ -50,7 +50,7 @@ function renderRecipes(recipes) {
             : "";
 
             card.innerHTML = `
-            <img src="${recipe.photo}" alt="${recipe.name}" class="photo" loading="lazy">
+            <img src="${recipe.photo}" alt="Фото хтось захавав" class="photo" loading="lazy">
             <h3>${recipe.name}</h3>
             <p>${recipe.recipe || 'Опис відсутній'}</p>
             ${ingredientsTable}
