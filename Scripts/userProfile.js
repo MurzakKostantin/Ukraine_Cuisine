@@ -91,12 +91,12 @@ function renderLikeRecipes(recipes) {
                         : "";
 
                     card.innerHTML = `
-            <img src="${recipe.photo}" alt="${recipe.name}" class="photo">
+            <img src="${recipe.photo}" alt="${recipe.name}" class="photo" loading="lazy">
             <h3>${recipe.name}</h3>
             <p>${recipe.recipe || 'Опис відсутній'}</p>
             ${ingredientsTable}
             ${videoIframe}
-            <img alt="like" class="like-button" id="like-button"> 
+            <img alt="like" class="like-button" loading="lazy" id="like-button"> 
 `;
 
                     const likeBtn = card.querySelector(".like-button");
