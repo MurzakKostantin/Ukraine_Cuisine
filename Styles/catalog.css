@@ -195,4 +195,9 @@ iframe{
         padding: 12px;
         font-size: 18px;
     }
+
+    .video{
+        width: 100%;
+        height: auto;
+    }
 }
