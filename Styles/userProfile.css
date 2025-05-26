@@ -195,16 +195,21 @@ iframe{
     /* Кнопки */
     .header-buttons {
         display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 10px;
+        justify-content: space-between; /* Розносить кнопки по краях */
+        width: 100%; /* Або max-width */
+        padding: 0 5vw; /* Відступи по боках */
+        box-sizing: border-box;
     }
-
+    /*.settingBtn{*/
+    /*    right: 0;*/
+    /*}*/
+    /*.outBtn{*/
+    /*    left: 0;*/
+    /*}*/
     .settingBtn,
     .outBtn {
-        padding: 2vw 5vw;
-        font-size: 30px;
+        padding: 2vw 4vw;
+        font-size: 3vw;
         border-radius: 15px;
         border: none;
         cursor: pointer;
