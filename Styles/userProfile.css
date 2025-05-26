@@ -213,7 +213,7 @@ iframe{
     }
     .video{
         align-items: center;
-        width: 150%;
+        width: 100%;
         height: auto;
     }
     .settingBtn {
