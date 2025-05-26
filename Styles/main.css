@@ -210,6 +210,12 @@ input[type="radio"]{
 .crimea { width: 350px; top: 980px; left: 1020px; }
 @media (max-width: 1000px) {
 
+    img{
+        width: auto;
+        height: auto;
+        max-width: 90vw;
+        max-height: 400px;
+    }
     .content{
         margin-top:-70vw ;
     }
