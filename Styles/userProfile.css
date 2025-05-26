@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 /* Кнопки в хедері */
-.settingBtn {
+.settingBtn
+{
     background-color: #ffcc00;
     color: white;
     border: none;
@@ -202,7 +203,7 @@ iframe{
 
     .settingBtn,
     .outBtn {
-        padding: 4vw 10vw;
+        padding: 2vw 5vw;
         font-size: 30px;
         border-radius: 15px;
         border: none;
