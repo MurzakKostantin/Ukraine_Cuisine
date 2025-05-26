@@ -217,10 +217,10 @@ input[type="radio"]{
     /*    margin-bottom: 100vw; !* Відступ зверху дорівнює ширині вікна *!*/
     /*}*/
     h1{
-        font-size: 6vw;
+        font-size: 8vw;
     }
     h2{
-        font-size: 5vw;
+        font-size: 6vw;
     }
     .zagolovok{
         top:0;
