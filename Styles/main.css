@@ -209,6 +209,22 @@ input[type="radio"]{
 .odeska { width: 260px; top: 660px; left: 600px; }
 .crimea { width: 350px; top: 980px; left: 1020px; }
 @media (max-width: 1000px) {
+
+    .content{
+        margin-top:-70vw ;
+    }
+    /*.parallax {*/
+    /*    margin-bottom: 100vw; !* Відступ зверху дорівнює ширині вікна *!*/
+    /*}*/
+    h1{
+        font-size: 6vw;
+    }
+    h2{
+        font-size: 5vw;
+    }
+    .zagolovok{
+        top:0;
+    }
     body {
         display: flex;
         justify-content: center;
