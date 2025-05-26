@@ -247,7 +247,7 @@ input[type="radio"]{
     }
     .arrows{
         position: absolute;
-        top: 60%;
+        top: 50%;
     }
     .slider{
         position: relative;  /* Це створить новий контекст позиціонування */
