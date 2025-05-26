@@ -209,8 +209,12 @@ input[type="radio"]{
 .odeska { width: 260px; top: 660px; left: 600px; }
 .crimea { width: 350px; top: 980px; left: 1020px; }
 @media (max-width: 1000px) {
-
-    img{
+    .slide p {
+        margin-top: -20px;
+        padding: 10px 0;
+        position: relative;
+    }
+    .slider img{
         width: auto;
         height: auto;
         max-width: 90vw;
@@ -243,7 +247,7 @@ input[type="radio"]{
     }
     .arrows{
         position: absolute;
-        top: 70%;
+        top: 60%;
     }
     .slider{
         position: relative;  /* Це створить новий контекст позиціонування */
