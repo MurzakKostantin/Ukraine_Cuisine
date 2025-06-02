@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /Autorization.html
+Disallow: /Registration.html
+Disallow: /Settings.html
+Allow: /
+
+Sitemap: https://ukraine-cuisine.vercel.app/sitemap.xml
